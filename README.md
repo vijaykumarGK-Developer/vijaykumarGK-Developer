@@ -22,9 +22,104 @@
 
 **Electronics & Communication Engineering** student at **Government Srikrishnarajendra Silver Jubilee Technological Institute**, Bangalore (VTU University, 2026).
 
-I architect **end-to-end production systems** spanning Android (Kotlin/Jetpack Compose), modern web (React/Next.js/TypeScript), and AI-powered backends (Python/FastAPI), unified by Firebase and Docker infrastructure. My workflow is **AI-augmented** — leveraging agentic IDEs and LLM toolchains to accelerate design, code generation, documentation, and testing while maintaining full engineering rigor.
+I architect **end-to-end production systems** spanning Android (Kotlin/Jetpack Compose), modern web (React/Next.js/TypeScript), and AI-powered backends (Python/FastAPI), unified by Firebase and Docker infrastructure. Every project in my portfolio was built using an **agentic AI-augmented workflow** — leveraging agentic IDEs and LLM toolchains to accelerate design, code generation, documentation, and testing while maintaining full engineering rigor.
 
-> **Philosophy:** *AI accelerates the routine; engineering judgement drives the architecture.*
+> **Philosophy:** *AI accelerates the routine. Engineering judgement drives the architecture.*
+
+---
+
+## Agentic Workflow
+
+I employ a structured **human-in-the-loop agentic workflow** where AI handles accelerated generation, and I retain full architectural control. This approach enables me to ship production-grade, multi-service applications that would typically require a team.
+
+### 1. Specification & Architecture Design
+
+Every project begins with a **detailed specification document** — a `plan.md` that captures all requirements, data flow diagrams, route tables, schema designs, security rules, component trees, and deployment strategy. This document serves as the single source of truth for both human and AI agents.
+
+```
+plan.md (comprehensive spec)
+  ├── Feature breakdown with acceptance criteria
+  ├── Technology stack decisions with rationale
+  ├── Data flow diagrams & architecture ASCII art
+  ├── Route/API endpoint tables with auth requirements
+  ├── Database schema & Firestore security rules
+  ├── Component tree & file structure
+  ├── Testing strategy & CI/CD pipeline design
+  └── Deployment topology & environment variables
+```
+
+### 2. Skills-Based Decomposition
+
+The specification is decomposed into **discrete, parallelizable skill units** — each mapped to a specialized sub-agent with context-limited scope. This mirrors how a team of engineers would divide work:
+
+| Skill | Responsibility | Agent Scope |
+|---|---|---|
+| **Scaffolder** | Vite+React+TS setup, Tailwind/shadcn/ui init, Firebase SDK config, React Router wiring, providers | Project skeleton & infrastructure |
+| **Feature Builder** | All pages, forms, modals, listing screens, static pages; wires everything to Firebase hooks | UI layer & business logic |
+| **Map Specialist** | Leaflet map integration, geolocation API, donor markers, radius circles, location picker | Geo-spatial features |
+| **Hook Builder** | Custom Firestore real-time hooks with `onSnapshot`, loading/error states, typed collections | Data layer |
+
+Each sub-agent receives only the relevant slice of the specification, ensuring focused, high-quality output without cross-contamination.
+
+### 3. Iterative Agentic Generation
+
+Agents work in a **structured generation loop** supervised through human review after each phase:
+
+```
+Specification
+     │
+     ▼
+[Agent: Scaffolder] → Project skeleton initialized (Vite, Firebase, Router, Tailwind, Theme, Auth)
+     │
+     ▼
+     Human Review → Confirm structure, adjust config
+     │
+     ▼
+[Agent: Hook Builder] → Firestore typed hooks created (useDonors, useHospitals, useEmergencyies, useAuth...)
+     │
+     ▼
+[Agent: Feature Builder] → Pages & components generated (SearchPage, Registration, SOS, Certificates...)
+     │
+     ▼
+[Agent: Map Specialist] → Map components integrated (DonorMap, LocationPicker, RadiusCircle)
+     │
+     ▼
+     Human Review → Code review, integration testing, edge case handling
+     │
+     ▼
+[Agent: Docs + Polish] → README, DOCUMENTATION, LICENSE, screenshots, CI/CD
+     │
+     ▼
+     Human Final Review → Quality gate, security audit, production readiness
+```
+
+### 4. Context Management & Toolchain
+
+Each agent operates within a **tightly scoped context** using the following AI toolchain:
+
+| Tool | Role | How It's Used |
+|---|---|---|
+| **OpenCode CLI** | Primary agentic orchestrator | Context-aware multi-file edits, sub-agent delegation, skill-based task routing, sequential thinking for complex refactors |
+| **Claude Code** | Deep reasoning for architecture & planning | Cross-file dependency analysis, migration planning, complex refactoring, security audit |
+| **Gemini CLI** | Rapid prototyping & boilerplate | Quick component generation, translation tasks, batch file transformations |
+| **Open Router** | LLM routing gateway | Routes to optimal model per task (GPT-4o for planning, Claude for reasoning, DeepSeek for code) |
+| **Prompt Engineering** | Structured task definition | Chain-of-thought specs, few-shot examples, exact output formatting for consistent agent results |
+
+### 5. Quality Assurance & Deployment
+
+All agent-generated code passes through the same engineering rigor as hand-written code:
+
+1. **TypeScript strict mode** — no implicit any, full type safety enforced
+2. **Lint & typecheck** — automated in CI pipeline before any merge
+3. **Firestore security rules** — validated against the auth model from `plan.md`
+4. **Cross-platform consistency** — web, Android, and HTML versions share identical Firebase backend
+5. **CI/CD automation** — GitHub Actions builds, type-checks, and deploys to GitHub Pages on every push
+
+### 6. Real-World Application
+
+This workflow was used to build every project in this portfolio. For example, the **Rakta-Vahini web app** was generated across 4 agent sessions — each focused on a specific skill — producing 40+ components, 12 pages, 6 custom Firestore hooks, 17 shadcn/ui primitives, Leaflet map integration, smart scoring algorithms, and a GitHub Actions CI/CD pipeline, all within a single unified architecture.
+
+The **Employee Knowledge Assistant** was built using a similar decomposition: a `plan.md` spec covering the RAG pipeline, vector store schema, API routes, and Docker topology, then executed by specialized agents for backend (FastAPI + SQLAlchemy + ChromaDB), frontend (Next.js + shadcn/ui), and infrastructure (Docker Compose + Nginx).
 
 ---
 
