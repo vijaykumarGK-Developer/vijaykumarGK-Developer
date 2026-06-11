@@ -5,9 +5,12 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions" />
@@ -15,19 +18,79 @@
 
 ---
 
-## 🧑‍💻 Professional Summary
+## Professional Summary
 
-**Electronics & Communication Engineer** | Government SKSJTI, KR Circle, Bengaluru — VTU University (2026)
+**Electronics & Communication Engineering** student at **Government Srikrishnarajendra Silver Jubilee Technological Institute**, Bangalore (VTU University, 2026).
 
-I architect and engineer **end-to-end production systems** spanning Android (Kotlin), modern web (React/TypeScript), and data analytics (Python), unified by Firebase real-time infrastructure. My workflow is **AI-augmented** — I leverage agentic IDEs and LLM toolchains to accelerate design, code generation, documentation, and testing without sacrificing quality.
+I architect **end-to-end production systems** spanning Android (Kotlin/Jetpack Compose), modern web (React/Next.js/TypeScript), and AI-powered backends (Python/FastAPI), unified by Firebase and Docker infrastructure. My workflow is **AI-augmented** — leveraging agentic IDEs and LLM toolchains to accelerate design, code generation, documentation, and testing while maintaining full engineering rigor.
 
-> **Philosophy:** *Tool-assisted craftsmanship. AI accelerates the routine; engineering judgement drives the architecture.*
+> **Philosophy:** *AI accelerates the routine; engineering judgement drives the architecture.*
 
 ---
 
-## 🛠️ Technical Proficiencies
+## Featured Projects
 
-### Programming Languages
+### AI-Powered Employee Knowledge Assistant
+[![GitHub](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github)](https://github.com/vijaykumarGK-Developer/employee-knowledge-assistant) [![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/vijaykumarGK-Developer/employee-knowledge-assistant/blob/main/LICENSE)
+
+An intelligent internal knowledge base that enables employees to query company documents using natural language. Features RAG-based Q&A with source citations, department-level access control, document management (PDF/DOCX/TXT/CSV), analytics dashboard, and a full REST API.
+
+| Layer | Technology |
+|---|---|
+| **Backend** | Python 3.12+, FastAPI, SQLAlchemy, PostgreSQL/ChromaDB |
+| **Frontend** | Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui |
+| **Vector Store** | ChromaDB (cosine similarity search with Sentence-Transformers `all-MiniLM-L6-v2`) |
+| **Q&A Engine** | Extractive (no LLM API needed — 100% local) |
+| **Infrastructure** | Docker, Docker Compose, Nginx reverse proxy |
+
+**API:** OpenAPI docs at `/docs` — endpoints for auth, document CRUD, chat with source citations, analytics, and admin management.
+
+---
+
+### Blood Donation Network — Rakta-Vahini
+[![Web App](https://img.shields.io/badge/Web_App-3178C6?style=flat-square&logo=react)](https://github.com/vijaykumarGK-Developer/raktavahini-web) [![Android App](https://img.shields.io/badge/Android_App-7F52FF?style=flat-square&logo=kotlin)](https://github.com/vijaykumarGK-Developer/rakthavahini) [![HTML Version](https://img.shields.io/badge/HTML_Version-E34F26?style=flat-square&logo=html5)](https://github.com/vijaykumarGK-Developer/rakthavahini-html)
+
+A **cross-platform, real-time blood donation ecosystem** connecting verified donors with hospitals and emergency requests. Deployed across three platforms sharing a common Firebase backend.
+
+| Platform | Stack | Highlights |
+|---|---|---|
+| **Web App** | React 19, TypeScript, Vite 6, Tailwind CSS 4, shadcn/ui, Firebase 11, Leaflet | Interactive donor map with blood group markers, smart composite scoring, radius-based proximity search, one-tap SOS broadcast, Google Auth, dark mode, GitHub Pages CI/CD |
+| **Android App** | Kotlin, Jetpack Compose, MVI Architecture, Firebase Auth & Firestore | Single `AppState` container, real-time snapshot listeners, certificate generation, dynamic theming |
+| **Lightweight Web** | Vanilla HTML, CSS, JavaScript, Leaflet | Zero dependencies, works everywhere, single-file architecture |
+
+**Core algorithms:** Haversine distance, composite smart scoring (`dist + responseSpeed × 0.1 + activeDaysAgo × 0.5 − freq × 0.2`), 90-day eligibility enforcement.
+
+---
+
+### Delta Crypto TradingView-Style Backtesting Framework
+[![GitHub](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github)](https://github.com/vijaykumarGK-Developer/delta-crypto-trading-view-backtest-stratergy)
+
+A free, Python-powered alternative to TradingView Pine Script for backtesting on Delta Exchange. Features a modular **7-block notebook architecture** with HMAC-SHA256 API authentication, multi-indicator strategies (VWAP, SMA, RSI, Bollinger Bands), and interactive Plotly visualizations.
+
+**Strategies:** Day Trading (VWAP mean reversion), Multi-Indicator VWAP, and custom strategy template. Includes performance metrics (win rate, profit factor, Sharpe ratio, max drawdown) and live automation templates.
+
+| Stack | Python, backtrader, pandas, NumPy, requests, Plotly, Delta Exchange v2 API |
+|---|---|
+
+---
+
+### OmniStock — Inventory Management System
+[![GitHub](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github)](https://github.com/vijaykumarGK-Developer/OmniStock-Inventory-Management) [![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/vijaykumarGK-Developer/OmniStock-Inventory-Management/blob/main/LICENSE)
+
+A full-stack inventory management platform with role-based access control (Admin/Manager/Staff), real-time stock tracking, POS billing, purchase order workflow, and interactive analytics dashboards.
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | React 19, TypeScript (strict), Tailwind CSS 4, Recharts, React Router v7 |
+| **Backend** | Express 5, Prisma 7 ORM, Zod validation, JWT auth (bcryptjs + jsonwebtoken) |
+| **Database** | SQLite via better-sqlite3 |
+| **Build** | Vite 8 (frontend), tsx (backend) |
+
+---
+
+## Technical Proficiencies
+
+### Languages
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
@@ -35,109 +98,49 @@ I architect and engineer **end-to-end production systems** spanning Android (Kot
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-### Frontend & UI Engineering
+### Frontend & UI
 ![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react)
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=next.js&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white)
-![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=flat-square)
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)
 
-### Mobile Engineering
-![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
-![MVI Architecture](https://img.shields.io/badge/MVI-FF6D00?style=flat-square)
-
 ### Backend & Database
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
 ![Firestore](https://img.shields.io/badge/Firestore-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![NoSQL](https://img.shields.io/badge/NoSQL-4EA94B?style=flat-square)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-FC6D26?style=flat-square)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 ### Data Science & Algorithmic Trading
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![backtrader](https://img.shields.io/badge/backtrader-FF6600?style=flat-square)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
 
 ### DevOps & CI/CD
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
 
 ---
 
-## 🤖 AI-Augmented Development Stack
-
-I integrate **agentic AI toolchains** into my development lifecycle — from architecture and scaffolding through testing and documentation — enabling faster iteration while maintaining full control over design decisions.
-
-### Agentic IDEs & CLI Tools
-
-| Tool | Purpose | Integration |
-|------|---------|-------------|
-| **OpenCode CLI** | Agentic coding assistant with contextual understanding | Primary AI pair-programmer for React/TypeScript and Python projects |
-| **Claude Code** | Anthropic's agentic CLI for complex multi-file reasoning | Architecture planning, refactoring, and cross-file dependency analysis |
-| **Gemini CLI** | Google's generative AI for code generation & review | Rapid prototyping and boilerplate generation |
-| **Antigravity CLI** | AI-powered code migration and transformation | Automated upgrades across framework versions and language migrations |
-
-### LLM Orchestration & Routing
-
-| Tool | Purpose |
-|------|---------|
-| **Open Router** | Unified API gateway to 200+ LLMs (GPT-4o, Claude 3.5, Gemini Pro, DeepSeek, Llama 3) |
-| **Prompt Engineering** | Structured prompting, chain-of-thought, and few-shot strategies for consistent output |
-
-### Development Workflow
-
-```
-Idea / Requirement
-      │
-      ▼
-[AI-Assisted Architecture] ← OpenCode + Claude Code (multi-file reasoning)
-      │
-      ▼
-[AI-Augmented Generation]  ← Gemini CLI + Open Router (boilerplate, components)
-      │
-      ▼
-[Human Review & Refinement] ← Engineering judgement, code review
-      │
-      ▼
-[AI-Powered Documentation] ← Auto-generated README, DOCUMENTATION, API refs
-      │
-      ▼
-[CI/CD Pipeline]            ← GitHub Actions, automated builds & deployment
-```
-
----
-
-## 📂 Featured Projects
-
-### 🩸 [Rakta-Vahini — Blood Donation Network](https://github.com/vijaykumarGK-Developer/raktavahini-web)
-
-A **cross-platform, real-time blood donation ecosystem** connecting donors with emergency requests across web and mobile.
-
-| Platform | Stack | Highlights |
-|---|---|---|
-| **Web App** ([repo](https://github.com/vijaykumarGK-Developer/raktavahini-web)) | React 19, TypeScript, Vite 6, Tailwind CSS 4, shadcn/ui, Firebase 11, Leaflet | Interactive donor map, smart scoring, SOS broadcast, dark mode, GitHub Pages CI/CD |
-| **Android App** ([repo](https://github.com/vijaykumarGK-Developer/rakthavahini)) | Kotlin, Jetpack Compose, MVI, Firebase Auth & Firestore | Native mobile, real-time sync, certificate generation |
-| **HTML/JS** ([repo](https://github.com/vijaykumarGK-Developer/rakthavahini-html)) | Vanilla JS, Leaflet, Firebase | Lightweight browser version |
-
-**Core algorithms:** Haversine distance, composite smart scoring (`dist + (responseSpeed × 0.1) + (activeDaysAgo × 0.5) − (freq × 0.2)`), 90-day eligibility check.
-
-### 📈 [Delta Crypto Trading View — Backtest Strategy](https://github.com/vijaykumarGK-Developer/delta-crypto-trading-view-backtest-stratergy)
-
-Python-based algorithmic trading framework powered by **backtrader**. Features a 7-block notebook architecture with 3 strategies (Golden Cross, RSI Mean Reversion, MACD Divergence), performance analytics, scalping optimization, and automation templates.
-
-### 📦 [OmniStock Inventory Management](https://github.com/vijaykumarGK-Developer/OmniStock-Inventory-Management)
-
-MIT-licensed inventory management system — HTML, CSS, JavaScript.
-
----
-
-## 📊 GitHub Analytics
+## GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=vijaykumarGK-Developer&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="GitHub stats" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=vijaykumarGK-Developer&show_icons=true&theme=dark&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub stats" width="48%" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vijaykumarGK-Developer&layout=compact&theme=dark&hide_border=true&exclude_repo=vijaykumarGK-Developer" alt="Top languages" width="48%" />
 </p>
 
@@ -147,7 +150,7 @@ MIT-licensed inventory management system — HTML, CSS, JavaScript.
 
 ---
 
-## 📬 Connect
+## Connect
 
 <p align="center">
   <a href="mailto:vijaykumar2572003@gmail.com">
@@ -162,7 +165,7 @@ MIT-licensed inventory management system — HTML, CSS, JavaScript.
 </p>
 
 <p align="center">
-  <b>📍</b> Bengaluru, Karnataka, India &nbsp;•&nbsp; <b>📞</b> +91 9108261127 &nbsp;•&nbsp; <b>🎓</b> VTU University, 2026
+  <b>Location:</b> Bengaluru, Karnataka, India &nbsp;•&nbsp; <b>Education:</b> VTU University, 2026
 </p>
 
 ---
